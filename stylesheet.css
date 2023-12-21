@@ -1,0 +1,1954 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: 768px) {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+}
+
+@font-face {
+  font-family: "RousseauDeco";
+  src: url("/font/RousseauDeco.ttf") format("truetype");
+}
+
+.espace {
+  padding-top: 200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+  }
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 3;
+  top: 2%;
+  align-items: center;
+  z-index: 999999999;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    display: none;
+  }
+
+}
+
+.nav-principale {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2%;
+  background-color: #FFF5ED;
+  z-index: 2;
+  margin-top: 80px;
+  border-bottom: 1px solid #d9dfed;
+  transition: background-color 1s ease-in-out;
+  box-shadow: 0px 10px 7px #00000020;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0.5em 2em;
+    flex-direction: row;
+    height: 70px;
+    gap: 10px;
+  }
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+.image-logo {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.imgae-logo img {
+  width: 100%;
+}
+
+#poop{
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-central {
+  width: 35%;
+  margin-left: 190px;
+}
+
+.nav-principale ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+  justify-content: space-between;
+  text-decoration: none;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+    margin-left: 0px;
+  }
+}
+
+.right1 {
+  font-family: 'poppins';
+  color: #352755;
+  font-weight: 300;
+}
+
+.right1 a {
+  transition: 0.3s ease-in-out;
+}
+
+.right1 a:hover {
+  color: #D8705D;
+}
+
+.CTA {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  width: 350px;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+#contact {
+  padding: 3% 12%;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: 'poppins';
+  background-color: transparent;
+  border: 2.4px solid #352755;
+  transition: 0.4s ease-in-out;
+}
+
+#contact:hover {
+  background-color: #352755;
+  color: #FFF;
+  cursor: pointer;
+}
+
+#billeterie {
+  padding: 3% 12%;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: 'poppins';
+  background: linear-gradient(282deg, rgba(222, 143, 51, 0.79) 2.74%, #F1A93C 106.67%);
+  border: 0px solid;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+  transition: 0.4s ease-in-out;
+}
+
+#billeterie:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.CTA p {
+  font-family: 'poppins';
+  color: #352755;
+  font-weight: 300;
+}
+
+
+
+/* RESET/BASIC STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --white: #ffffff;
+  --light-grey: #edf0f1;
+  --violet: #655be1;
+  --dark-violet: #5146e1;
+  --black: #21232a;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+/* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.nav {
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 650px;
+    border-radius: 5px 5px 25px 25px;
+    background-color: #FFF5ED;
+    box-shadow: 0px 0px 20px #00000040;
+    z-index: 90;
+
+  }
+}
+
+i {
+  z-index: 99;
+}
+
+.nav [type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.nav [type="checkbox"]+label {
+  /* ca c'est le code pour le bouton menu */
+  position: relative;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: #FFF5ED;
+  box-shadow: 0px 3px 5px #00000040;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+  font-family: 'poppins';
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.nav [type="checkbox"]+label:hover {
+  background-color: #e8931340;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.menu li {
+  /* ca c'est le code pour les petis menu div carre quand tu clique */
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.menu li:nth-child(1) {
+  transition-delay: 0.2s;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.menu li:nth-child(2) {
+  transition-delay: 0.15s;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.menu li:nth-child(3) {
+  transition-delay: 0.1s;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.menu li:nth-child(4) {
+  transition-delay: 0.05s;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+
+.menu li a {
+  /* ca c'est le code pour les petis menu div ronde quand tu clique */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D8705D;
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.menu li a span {
+  /* texte */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(-100% - 5px));
+  width: 100%;
+  font-family: 'poppins';
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #352755;
+  font-weight: 500;
+  display: none;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+  }
+}
+
+#clc {
+  margin-left: -12px;
+}
+
+.nav input:checked+label {
+  background: var(--black);
+  transform: translateY(calc(-50% + 4px));
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.nav input:checked~.menu li:nth-child(1) {
+  top: -210px;
+  transition-delay: 0.1s;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.nav input:checked~.menu li:nth-child(2) {
+  top: -160px;
+  left: calc(50% - 75px);
+  transition-delay: 0.2s;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.nav input:checked~.menu li:nth-child(3) {
+  top: -160px;
+  left: calc(50% + 75px);
+  transition-delay: 0.3s;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.nav input:checked~.menu li:nth-child(4) {
+  top: -110px;
+  transition-delay: 0.4s;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+.nav input:checked~.menu li a span {
+  opacity: 1;
+  transition-delay: 0.9s;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+
+  }
+}
+
+
+
+.section2 {
+  width: 100%;
+  height: 116vh;
+  display: flex;
+  align-items: center;
+  background-image: url(asset/Fichier\ 2.png);
+  background-repeat: no-repeat;
+  background-size: 105%;
+  margin-top: 80px;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+    margin-top: 0px;
+    background-image: url(asset/ejr.png);
+    height: 700px;
+  }
+}
+
+.global1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 7%;
+  margin-bottom: 250px;
+  gap: 45px;
+  position: relative;
+
+  /*code qui permet de faire apparaitre la div avec JAVASCRIPT */
+
+  left: -40%;
+  /* Placez l'élément au milieu de l'écran horizontalement */
+  opacity: 0;
+  transition: left 1.4s ease-in-out, opacity 1s ease-in;
+
+
+  @media only screen and (max-width:768px) {
+    width: 100%;
+    align-items: center; 
+    padding-left: 0px;
+    padding: 0% 2%;
+
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+.texte {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+  @media only screen and (max-width:768px) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.texte h1 {
+  font-family: 'RousseauDeco';
+  font-size: 100px;
+  font-weight: 900;
+  color: #352755;
+
+  @media only screen and (max-width:768px) {
+    font-size: 70px;
+  }
+}
+
+.texte span {
+  @media only screen and (max-width:768px) {
+    letter-spacing: 20px;
+  }
+}
+
+.texte h2 {
+  font-family: 'poppins';
+  font-size: 20px;
+  font-weight: 600;
+  color: #352755;
+}
+
+.texte button {
+  padding: 2% 8%;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: 'poppins';
+  background: linear-gradient(282deg, rgb(222, 142, 51) 2.74%, #F1A93C 106.67%);
+  border: 0px solid;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+
+  @media only screen and (max-width:768px) {
+    padding: 10% 30%;
+    margin-right: 90px;
+  }
+}
+
+.texte button:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.partenaire-accueil {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media only screen and (max-width:768px) {
+    margin-left: 40px;
+  }
+}
+
+.partenaire-accueil h3 {
+  font-family: 'poppins';
+  font-size: 20px;
+  font-weight: 400;
+  color: #352755;
+}
+
+.partenaire-accueil img {
+  margin-right: 50px;
+  width: 80px;
+
+  @media only screen and (max-width:768px) {
+    margin-left: 5px;
+  }
+}
+
+.section3 {
+  width: 100%;
+  height: 100vh;
+  margin-top: -190px;
+  background-image: url(asset/fond-section-2.svg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width:768px) {
+    height: 180vh;
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+}
+
+.global2 {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+  }
+}
+
+.col1 {
+  width: 20%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.texte-col {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+
+  position: relative;
+
+  /*code qui permet de faire apparaitre la div avec JAVASCRIPT */
+
+  left: 80%;
+  /* Placez l'élément au milieu de l'écran horizontalement */
+  opacity: 0;
+  transition: left 0.9s ease-in-out, opacity 1s ease-in;
+
+  @media only screen and (max-width:768px) {
+    left: 0%;
+    /* Placez l'élément au milieu de l'écran horizontalement */
+    opacity: 1;
+  }
+}
+
+.texte-col h1 {
+  font-family: 'RousseauDeco';
+  font-size: 50px;
+  font-weight: 800;
+  color: #352755;
+}
+
+.texte-col p {
+  font-family: 'poppins';
+  font-size: 15px;
+  font-weight: 300;
+  color: #352755;
+}
+
+.texte-col a {
+  font-family: 'poppins';
+  font-size: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.texte-col a:hover {
+  color: #352755;
+}
+
+.texte-col img {
+  width: 40px;
+}
+
+.texte-col span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media only screen and (max-width:768px) {
+    justify-content: center;
+  }
+}
+
+.texte-col span{
+  transition: 0.3s ease;
+}
+
+.texte-col span:hover{
+  
+  margin-left: 20px;
+}
+
+
+.col2 {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    width: 90%;
+  }
+}
+
+.col2 img {
+  width: 100%;
+}
+
+.col3 {
+  width: 37%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width:768px) {
+    width: 90%;
+  }
+}
+
+.col3 img {
+  width: 90%;
+  height: 95%;
+}
+
+.section4 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF5ED;
+
+  @media only screen and (max-width:768px) {
+    height: 200vh;
+    flex-direction: column;
+  }
+}
+
+.global3 {
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+    height: 2000px;
+  }
+}
+
+.titre h1 {
+  font-family: 'RousseauDeco';
+  font-size: 40px;
+  font-weight: 600;
+  color: #352755;
+
+  @media only screen and (max-width:768px) {
+    text-align: center;
+  }
+}
+
+.mes-cartes {
+  width: 95%;
+  height: 85%;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+    height: 1500px;
+  }
+}
+
+.card1 {
+  width: 30%;
+  height: 70%;
+  background-color: #CD6B5830;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+
+  position: relative;
+
+  /*code qui permet de faire apparaitre la div avec JAVASCRIPT */
+
+  top: 80%;
+  /* Placez l'élément au milieu de l'écran horizontalement */
+  opacity: 0;
+  transition: top 0.9s ease-in-out, opacity 1s ease-in, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+  @media only screen and (max-width:768px) {
+    width: 90%;
+    height: 90%;
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+  box-shadow: 0px 4px 9px #4c4c4c40;
+  transform: scale(1.05);
+}
+
+.card1 img {
+  width: 150px;
+
+  @media only screen and (max-width:768px) {
+    width: 120px;
+  }
+}
+
+.card1 h2 {
+  font-family: 'poppins';
+  font-size: 13px;
+  font-weight: 200;
+  color: #D66D5B;
+}
+
+.card1 h1 {
+  font-family: 'RousseauDeco';
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.card1 P {
+  font-family: 'poppins';
+  font-size: 15px;
+  font-weight: 300;
+  color: #000;
+}
+
+.texte-carte1 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+.card2 {
+  width: 30%;
+  height: 70%;
+  background-color: #CD6B5830;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  transition: 0.4s ease-in-out;
+
+  position: relative;
+
+  /*code qui permet de faire apparaitre la div avec JAVASCRIPT */
+
+  top: 80%;
+  /* Placez l'élément au milieu de l'écran horizontalement */
+  opacity: 0;
+  transition: top 0.9s ease-in-out, opacity 1s ease-in, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+  @media only screen and (max-width:768px) {
+    width: 90%;
+    height: 90%;
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+.card2 img {
+  width: 150px;
+
+  @media only screen and (max-width:768px) {
+    width: 120px;
+  }
+}
+
+.card2 h2 {
+  font-family: 'RousseauDeco';
+  font-size: 13px;
+  font-weight: 200;
+  color: #D66D5B;
+}
+
+.card2 h1 {
+  font-family: 'RousseauDeco';
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.card2 P {
+  font-family: 'poppins';
+  font-size: 15px;
+  font-weight: 300;
+  color: #000;
+}
+
+.texte-carte2 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+.card3 {
+  width: 30%;
+  height: 70%;
+  background-color: #CD6B5830;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+
+  position: relative;
+
+  /*code qui permet de faire apparaitre la div avec JAVASCRIPT */
+
+  top: 80%;
+  /* Placez l'élément au milieu de l'écran horizontalement */
+  opacity: 0;
+  transition: top 0.9s ease-in-out, opacity 1s ease-in, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+  @media only screen and (max-width:768px) {
+    width: 90%;
+    height: 90%;
+    top: 0%;
+    opacity: 1;
+  }
+}
+
+.card3 img {
+  width: 150px;
+
+  @media only screen and (max-width:768px) {
+    width: 120px;
+  }
+}
+
+.card3 h2 {
+  font-family: 'poppins';
+  font-size: 13px;
+  font-weight: 200;
+  color: #D66D5B;
+}
+
+.card3 h1 {
+  font-family: 'RousseauDeco';
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.card3 P {
+  font-family: 'poppins';
+  font-size: 15px;
+  font-weight: 300;
+  color: #000;
+}
+
+.texte-carte3 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section5 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-image: url(asset/fond-trait.svg);
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media only screen and (max-width:768px) {
+    height: 160vh;
+  }
+}
+
+.section5 h1 {
+  font-family: 'RousseauDeco';
+  font-size: 40px;
+  font-weight: 600;
+  color: #352755;
+
+  @media only screen and (max-width:768px) {
+    text-align: center;
+  }
+}
+
+.global4 {
+  width: 90%;
+  height: 90%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width:768px) {
+    height: 1200px;
+    flex-direction: column;
+  }
+}
+
+.col4 {
+  width: 40%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width:768px) {
+    width: 100%;
+    gap: 80px;
+    height: 65%;
+
+  }
+}
+
+.sport1 {
+  width: 95%;
+  height: 14%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  @media only screen and (max-width:768px) {
+    gap: 30px;
+  }
+}
+
+.sport1-bis {
+  width: 95%;
+  height: 14%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: end;
+
+  @media only screen and (max-width:768px) {
+    gap: 30px;
+  }
+}
+
+.img-sport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    width: 100px;
+  }
+}
+
+.img-sport-bis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+
+  @media only screen and (max-width:768px) {
+    width: 100px;
+  }
+}
+
+.img-sport-bis2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+
+  @media only screen and (max-width:768px) {
+    width: 100px;
+  }
+}
+
+.img-sport-bis img {
+  width: 75px;
+}
+
+.img-sport img {
+  width: 80px;
+
+  @media only screen and (max-width:768px) {
+    width: 60px;
+  }
+}
+
+.texte-sport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texte-sport p {
+  font-family: 'RousseauDeco';
+  font-size: 17px;
+  font-weight: 500;
+  color: #352755;
+  line-height: 40px;
+
+  @media only screen and (max-width:768px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+#sport1 {
+  @media only screen and (min-width:768px) {
+  position: relative;
+
+  left: -40%;
+  opacity: 0;
+  transition: left 0.9s ease-in-out, opacity 1s ease-in;
+  }
+}
+
+#sport2 {
+  @media only screen and (min-width:768px) {
+    position: relative;
+  
+    left: -40%;
+    opacity: 0;
+    transition: left 0.9s ease-in-out, opacity 1s ease-in;
+    }
+}
+
+#sport3 {
+  @media only screen and (min-width:768px) {
+    position: relative;
+  
+    left: -40%;
+    opacity: 0;
+    transition: left 0.9s ease-in-out, opacity 1s ease-in;
+    }
+}
+
+#sport4 {
+  @media only screen and (min-width:768px) {
+  position: relative;
+
+  left: -40%;
+  opacity: 0;
+  transition: left 0.9s ease-in-out, opacity 1s ease-in;
+  }
+}
+
+#sport5 {
+  @media only screen and (min-width:768px) {
+    position: relative;
+  
+    left: -40%;
+    opacity: 0;
+    transition: left 0.9s ease-in-out, opacity 1s ease-in;
+    }
+}
+
+#sport6 {
+  @media only screen and (min-width:768px) {
+    position: relative;
+  
+    left: -40%;
+    opacity: 0;
+    transition: left 0.9s ease-in-out, opacity 1s ease-in;
+    }
+}
+
+
+.section6 {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+  background-color: #FFF5ED;
+  padding-bottom: 100px;
+
+  @media only screen and (max-width:768px) {
+    height: 220vh;
+    padding-bottom: 20px;
+  }
+
+}
+
+.section6 h1 {
+  font-family: 'RousseauDeco';
+  font-size: 40px;
+  font-weight: 600;
+  color: #352755;
+
+  @media only screen and (max-width:768px) {
+    text-align: center;
+  }
+}
+
+.section6 h2 {
+  font-family: 'RousseauDeco';
+  font-size: 20px;
+  font-weight: 600;
+  color: #352755;
+
+  @media only screen and (max-width:768px) {
+    text-align: center;
+  }
+}
+
+.global5 {
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+  }
+}
+
+.image-vert {
+  width: 45%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(asset/right_section.png);
+
+  position: relative;
+
+  left: -40%;
+  opacity: 0;
+  transition: left 0.9s ease-in-out, opacity 1s ease-in;
+
+  @media only screen and (max-width:768px) {
+    height: 50%;
+    width: 100%;
+    margin-top: 40px;
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+.bullet-point {
+  width: 45%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media only screen and (max-width:768px) {
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+.col5 {
+  width: 95%;
+  height: 25%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+
+  @media only screen and (max-width:768px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+  }
+}
+
+.col5:hover {
+  transform: scale(0.95);
+  box-shadow: 0px 4px 9px #4c4c4c40;
+}
+
+.partie1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 90%;
+  height: 30%;
+}
+
+.numéro {
+  width: 23.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numéro img {
+  width: 50px;
+}
+
+.petit-titre {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.paragraphe {
+  padding-left: 143px;
+  padding-right: 40px;
+
+  @media only screen and (max-width:768px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.paragraphe p {
+  font-family: 'poppins';
+  font-size: 15px;
+  font-weight: 400;
+  color: #352755;
+}
+
+
+
+
+.bandeau {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  background-color: #CD6B5830;
+  justify-content: center;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+    height: 900px;
+  }
+}
+
+.info1,
+.info2,
+.info3 {
+  width: 33%;
+  height: 400px;
+  border-right: 1px solid #352755;
+  transition: 1s ease;
+
+  @media only screen and (max-width:768px) {
+    width: 100%;
+    border-bottom: 1px solid #352755;
+    border-right: 0px solid #352755;
+  }
+}
+
+.info1:hover {
+  width: 55%;
+  transition: 2s ease-in-out;
+}
+
+.info2:hover {
+  width: 50%;
+  transition: 2s ease-in-out;
+}
+
+.info3:hover {
+  width: 50%;
+  transition: 2s ease-in-out;
+}
+
+
+.info1 img {
+  height: 140px;
+  transform: rotate(140deg);
+  display: block;
+}
+
+.info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+
+.info1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 120px;
+}
+
+.info1 p {
+  display: flex;
+  justify-content: center;
+  font-family: 'RousseauDeco';
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+}
+
+.info1 .counter {
+  font-family: 'RousseauDeco';
+  font-size: 80px;
+  color: #E93547;
+  font-weight: 600;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.info2 p {
+  display: flex;
+  justify-content: center;
+  font-family: 'RousseauDeco';
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+}
+
+.info2 .counter {
+  font-family: 'RousseauDeco';
+  font-size: 80px;
+  color: #E93547;
+  font-weight: 600;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.info3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+
+.info3 p {
+  display: flex;
+  justify-content: center;
+  font-family: 'RousseauDeco';
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+}
+
+.info3 .counter {
+  font-family: 'RousseauDeco';
+  font-size: 80px;
+  color: #E93547;
+  font-weight: 600;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.info3 img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 120px;
+  transform: rotate(-45deg);
+}
+
+
+.section9 {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFF5ED;
+  padding-top: 5%;
+  padding-bottom: 10%;
+
+  @media only screen and (max-width:768px) {
+    display: none;
+  }
+}
+
+.section9 h1 {
+  font-family: 'RousseauDeco';
+  font-size: 40px;
+  font-weight: 600;
+  color: #352755;
+  padding-bottom: 2%;
+
+  @media only screen and (max-width:768px) {
+    text-align: center;
+  }
+}
+
+.global6 {
+  width: 90%;
+  height: 90%;
+}
+
+.global6 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: #D8705D30;
+}
+
+#last-reponsive {
+  display: flex;
+
+  @media only screen and (max-width:768px) {
+    display: none;
+  }
+}
+
+#last-reponsive2 {
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+  }
+}
+
+.section10 {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  background-color: #FFF5ED;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20%;
+  padding-top: 13%;
+}
+
+.global7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+   padding-bottom: 150px;
+  }
+}
+
+.section10 img {
+  width: 80%;
+}
+
+#responsive {
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+    width: 100%;
+    padding-top: 120px;
+  }
+}
+
+#desktop {
+  @media only screen and (max-width:768px) {
+    display: none;
+  }
+}
+
+.section11 {
+  font-family: 'poppins';
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFF5ED;
+  margin-top: -150px;
+}
+
+.faq-header {
+  font-size: 42px;
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+}
+
+.faq-header p {
+  font-family: 'RousseauDeco';
+}
+
+.faq-content {
+  margin: 0 auto;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #0285C7;
+  cursor: pointer;
+}
+
+
+.panel-title {
+  z-index: 1;
+  font-size: 24px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+
+.panel-content {
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+
+.panel:checked~.panel-content {
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+  z-index: 100;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 10;
+  font-size: 42px;
+  line-height: 100%;
+  user-select: none;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.panel:checked~.plus {
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
+}
+
+
+.faq-question2 {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question2:hover {
+  background-color: #F4C300;
+  cursor: pointer;
+}
+
+.faq-question3 {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question3:hover {
+  background-color: #000000;
+  cursor: pointer;
+  color: #fcfcfc;
+}
+
+
+.faq-question4 {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question4:hover {
+  background-color: #0CA347;
+  cursor: pointer;
+}
+
+.faq-question5 {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question5:hover {
+  background-color: #DF0024;
+  cursor: pointer;
+  color: #fcfcfc;
+}
+
+.footer {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF5ED;
+  background-image: url(asset/JO-footer.png);
+  background-position: center;
+  align-items: end;
+  justify-content: center;
+
+  @media only screen and (max-width:768px) {
+    height: 210vh;
+    align-items: center;
+  }
+
+}
+
+.global8 {
+  width: 90%;
+  height: 90%;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.logo-footer {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    justify-content: center;
+  }
+}
+
+.logo-footer img {
+  width: 60px;
+}
+
+.logo-footer h1 {
+  font-family: 'RousseauDeco';
+  font-size: 25px;
+  font-weight: 600;
+  color: #352755;
+  padding-bottom: 0%;
+}
+
+.global9 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  height: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.global9 h2 {
+  font-family: 'RousseauDeco';
+  font-size: 25px;
+  font-weight: 600;
+  color: #352755;
+}
+
+.global9 p {
+  font-family: 'poppins';
+  font-size: 17px;
+  font-weight: 300;
+  color: #352755;
+}
+
+.global9 a {
+  display: flex;
+}
+
+.global9 a:hover {
+  cursor: pointer;
+  color: #D8705D;
+}
+
+.col6 {
+  width: 17%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media only screen and (max-width:768px) {
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.col7 {
+  width: 17%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media only screen and (max-width:768px) {
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.col8 {
+  width: 50%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media only screen and (max-width:768px) {
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.partners {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+  }
+}
+
+.partners img {
+  width: 70px;
+}
+
+.mes-colones {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  gap: 60px;
+  width: 100%;
+  height: 90%;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+  }
+}
+
+.copyright {
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  display: flex;
+
+  @media only screen and (max-width:768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.copyright h3 {
+  font-family: 'poppins';
+  font-size: 15px;
+  font-weight: 300;
+  color: #979797;
+}
+
+.bas {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (max-width:768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.legal {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.legal p {
+  font-family: 'poppins';
+  font-size: 15px;
+  font-weight: 300;
+  color: #979797;
+}
+
+#desktop2 {
+  display: none;
+}
+
+#responsive2 {
+  display: none;
+
+  @media only screen and (max-width:768px) {
+    display: flex;
+  }
+
+}
